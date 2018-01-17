@@ -16,6 +16,16 @@ $token = $ziggeo->auth()->generate(
     ]
 );
 
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 ?>
 <html>
 <head>
@@ -25,7 +35,8 @@ $token = $ziggeo->auth()->generate(
             token: "dc39fca5434c0532bee964012181ca04",
             webrtc_streaming: true,
             auth: true,
-            "client-auth": "<?php echo $token ?>"
+            "client-auth": "<?php echo $token ?>",
+            key: "<?php generateRandomString(10); ?>"
         });
     </script>
 </head>

@@ -1,0 +1,69 @@
+{
+  "volatile": false,
+  "event_type": "video_create",
+  "event_kind": "create",
+  "data": {
+    "video": {
+      "volatile": true,
+      "token": "bdd0bf2de393bb3dcc0e4ac5b8de92e9",
+      "key": null,
+      "state": 3,
+      "only_audio": false,
+      "title": null,
+      "description": null,
+      "max_duration": null,
+      "enforce_duration": false,
+      "video_source": null,
+      "duration": null,
+      "tags": null,
+      "data": null,
+      "device_info": {
+        "api_version": "2",
+        "location": "http:\/\/mordred.hu\/test_record.php",
+        "userAgent": "Mozilla\/5.0 (X11; Linux x86_64; rv:58.0) Gecko\/20100101 Firefox\/58.0",
+        "flash": "Flash not installed but supported",
+        "device": "Desktop",
+        "os": "Unix",
+        "browser": "Firefox",
+        "version": "58",
+        "revision": {
+          "version": "1",
+          "revision": "30",
+          "latest": "true",
+          "prerelease": "false"
+        }
+      },
+      "submission_date": null,
+      "expiration_days": null,
+      "resubmission_date": null,
+      "stream_submission_date": null,
+      "delete_old_streams": false,
+      "auto_crop": false,
+      "auto_pad": false,
+      "hd": false,
+      "average_rating": null,
+      "submitted": false,
+      "approved": null,
+      "moderation_reason": "",
+      "effect_profile": [
+        "800bfaafad9a901704c3a3397ffe1422"
+      ],
+      "default_image_selector": 0.5,
+      "type": "ApiVideo",
+      "created": 1516194321,
+      "owned": false,
+      "video_profile": null,
+      "meta_profile": null,
+      "state_string": "EMPTY",
+      "streams": [],
+      "original_stream": null,
+      "default_stream": null,
+      "embed_image_url": "embed.ziggeo.com\/v1\/applications\/dc39fca5434c0532bee964012181ca04\/videos\/bdd0bf2de393bb3dcc0e4ac5b8de92e9\/image",
+      "embed_video_url": "embed.ziggeo.com\/v1\/applications\/dc39fca5434c0532bee964012181ca04\/videos\/bdd0bf2de393bb3dcc0e4ac5b8de92e9\/video"
+    }
+  },
+  "webhook": true,
+  "type": "ApiEvent",
+  "created": 1516194321,
+  "owned": true
+}

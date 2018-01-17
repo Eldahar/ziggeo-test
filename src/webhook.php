@@ -1,6 +1,6 @@
 <?php
 
-$filename = sprintf("../%s", date("U"));
+$filename = sprintf("../tmp/%s", date("U"));
 
 file_put_contents(
     $filename."_request.log",

@@ -55,7 +55,7 @@ function generateRandomString($length = 10) {
                 picksnapshots: false,
                 skipinitial: true,
                 skipinitialonrerecord: true,
-                primaryrecord: true,
+//                primaryrecord: true,
                 timelimit: 10,
                 timeminlimit: 10,
                 autorecord: true,

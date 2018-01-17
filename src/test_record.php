@@ -1,5 +1,5 @@
 <?php
- require_once "vendor/autoload.php";
+ require_once "../vendor/autoload.php";
 
 $ziggeo = new Ziggeo(
     'dc39fca5434c0532bee964012181ca04',
@@ -31,21 +31,9 @@ $token = $ziggeo->authtokens()->create(
 <body>
 
 
-<div id="replace_me-v2_recorder"></div> <script>
-    ZiggeoApi.Events.on("system_ready", function() {
-        var recorder = new ZiggeoApi.V2.Recorder({
-            element: document.getElementById("replace_me-v2_recorder"),
-            attrs: {
-                width: 320,
-                height: 240,
-                theme: "modern",
-                themecolor: "red"
-            }
-        });
 
-        recorder.activate();
-    });
-</script>
+
+<ziggeorecorder ziggeo-width=320 ziggeo-height=240 ziggeo-theme="modern" ziggeo-themecolor="red"> </ziggeorecorder>
 
 
 </body>

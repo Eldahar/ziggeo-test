@@ -6,7 +6,7 @@ $ziggeo = new Ziggeo(
     '944e4e74eceeb43cd46ef15ace3f5134',
     '802376861b2dced1401381bf77864346'
 );
-$token = $ziggeo->authtokens()->create(
+$token = $ziggeo->auth()->generate(
     [
         "grants" => [
             "create" => [
@@ -25,7 +25,7 @@ $token = $ziggeo->authtokens()->create(
             token: "dc39fca5434c0532bee964012181ca04",
             webrtc_streaming: true,
             auth: true,
-            "server-auth": "<?php echo $token->token ?>"
+            "client-auth": "<?php echo $token ?>"
         });
     </script>
 </head>

@@ -30,8 +30,9 @@ $token = $ziggeo->authtokens()->create(
 </head>
 <body>
 
-<div id="replace_me-v2_recorder"></div> <script>
-    ZiggeoApi.Events.on("system_ready", function() {
+<div id="replace_me-v2_recorder"></div>
+<script>
+    // ZiggeoApi.Events.on("system_ready", function() {
         var recorder = new ZiggeoApi.V2.Recorder({
             element: document.getElementById("replace_me-v2_recorder"),
             attrs: {
@@ -43,7 +44,7 @@ $token = $ziggeo->authtokens()->create(
         });
 
         recorder.activate();
-    });
+    // });
 </script>
 
 </body>

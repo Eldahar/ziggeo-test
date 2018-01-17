@@ -59,7 +59,8 @@ function generateRandomString($length = 10) {
                 timelimit: 10,
                 timeminlimit: 10,
                 autorecord: true,
-                countdown: 0
+                countdown: 0,
+                localplayback: false
             }
         });
 

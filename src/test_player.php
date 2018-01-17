@@ -2,7 +2,7 @@
 
 require_once "../vendor/autoload.php";
 
-$token = "ae8d7a5b95c8a8b5d5958f599dea4d14";
+$videoToken = "ae8d7a5b95c8a8b5d5958f599dea4d14";
 
 $ziggeo = new Ziggeo(
     'dc39fca5434c0532bee964012181ca04',
@@ -38,7 +38,7 @@ $token = $ziggeo->auth()->generate(
 
 <div id="replace_me-v2_player"></div>
 <script>
-    ZiggeoApi.Events.on("system_ready", function() {
+//    ZiggeoApi.Events.on("system_ready", function() {
         var player = new ZiggeoApi.V2.Player({
             element: document.getElementById("replace_me-v2_player"),
             attrs: {
@@ -46,12 +46,12 @@ $token = $ziggeo->auth()->generate(
                 height: 180,
                 theme: "modern",
                 themecolor: "red",
-                video: "_sample_video"
+                video: "<?php echo $videoToken; ?>"
             }
         });
 
         player.activate();
-    });
+//    });
 </script>
 </body>
 </html>

@@ -52,7 +52,12 @@ function generateRandomString($length = 10) {
                 theme: "modern",
                 themecolor: "red",
                 key: "<?php echo generateRandomString(10); ?>",
-                picksnapshots: false
+                picksnapshots: false,
+                skipinitial: true,
+                skipinitialonrerecord: true,
+                primaryrecord: true,
+                timelimit: 10,
+                timeminlimit: 5
             }
         });
 

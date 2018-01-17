@@ -58,10 +58,10 @@ function generateRandomString($length = 10) {
                 primaryrecord: true,
                 timelimit: 10,
                 timeminlimit: 10
-//                autorecord: true
-//                countdown: 0,
-//                rerecordable: false,
-//                allowupload: false
+                autorecord: true
+                countdown: 0,
+                rerecordable: false,
+                allowupload: false
             }
         });
 

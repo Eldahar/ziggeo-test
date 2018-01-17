@@ -60,7 +60,9 @@ function generateRandomString($length = 10) {
                 timeminlimit: 10,
                 autorecord: true,
                 countdown: 0,
-                localplayback: false
+                rerecordable: false,
+                allowupload: false,
+                playfullscreenonmobile: false
             }
         });
 

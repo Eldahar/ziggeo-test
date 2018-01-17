@@ -22,7 +22,7 @@ $token = $ziggeo->authtokens()->create(
     <link rel="stylesheet" href="https://assets-cdn.ziggeo.com/v2-stable/ziggeo.css" />
     <script src="https://assets-cdn.ziggeo.com/v2-stable/ziggeo.js"></script>
     <script>var app = new ZiggeoApi.V2.Application({
-            token:"dc39fca5434c0532bee964012181ca04",
+            token: "<?php echo $token->token ?>",
             webrtc_streaming: true,
             auth: true
         });

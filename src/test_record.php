@@ -61,8 +61,7 @@ function generateRandomString($length = 10) {
                 autorecord: true,
                 countdown: 0,
                 rerecordable: false,
-                allowupload: false,
-                playfullscreenonmobile: false
+                allowupload: false
             }
         });
 

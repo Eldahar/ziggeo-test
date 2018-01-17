@@ -30,11 +30,21 @@ $token = $ziggeo->authtokens()->create(
 </head>
 <body>
 
+<div id="replace_me-v2_recorder"></div> <script>
+    ZiggeoApi.Events.on("system_ready", function() {
+        var recorder = new ZiggeoApi.V2.Recorder({
+            element: document.getElementById("replace_me-v2_recorder"),
+            attrs: {
+                width: 320,
+                height: 240,
+                theme: "modern",
+                themecolor: "red"
+            }
+        });
 
-
-
-<ziggeorecorder ziggeo-width=320 ziggeo-height=240 ziggeo-theme="modern" ziggeo-themecolor="red"> </ziggeorecorder>
-
+        recorder.activate();
+    });
+</script>
 
 </body>
 </html>

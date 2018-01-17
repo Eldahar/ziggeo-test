@@ -54,10 +54,10 @@ function generateRandomString($length = 10) {
                 key: "<?php echo generateRandomString(10); ?>",
                 picksnapshots: false,
                 skipinitial: true,
-                skipinitialonrerecord: true
-//                primaryrecord: true,
-//                timelimit: 10,
-//                timeminlimit: 10,
+                skipinitialonrerecord: true,
+                primaryrecord: true,
+                timelimit: 10,
+                timeminlimit: 10
 //                autorecord: true,
 //                countdown: 0,
 //                rerecordable: false,

@@ -52,9 +52,9 @@ function generateRandomString($length = 10) {
                 theme: "modern",
                 themecolor: "red",
                 key: "<?php echo generateRandomString(10); ?>",
-                picksnapshots: false
-//                skipinitial: true,
-//                skipinitialonrerecord: true,
+                picksnapshots: false,
+                skipinitial: true,
+                skipinitialonrerecord: true
 //                primaryrecord: true,
 //                timelimit: 10,
 //                timeminlimit: 10,

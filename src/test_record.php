@@ -35,8 +35,7 @@ function generateRandomString($length = 10) {
             token: "dc39fca5434c0532bee964012181ca04",
             webrtc_streaming: true,
             auth: true,
-            "client-auth": "<?php echo $token ?>",
-            key: "<?php generateRandomString(10); ?>"
+            "client-auth": "<?php echo $token ?>"
         });
     </script>
 </head>
@@ -51,7 +50,8 @@ function generateRandomString($length = 10) {
                 width: 320,
                 height: 240,
                 theme: "modern",
-                themecolor: "red"
+                themecolor: "red",
+                key: "<?php generateRandomString(10); ?>"
             }
         });
 

@@ -7,41 +7,19 @@ $ziggeo = new Ziggeo(
     '802376861b2dced1401381bf77864346'
 );
 
-$serverToken = $ziggeo->authtokens()->create([
+$permissions = [
     "grants" => [
-        "create" => [
-            "session_owned" => true
-        ],
-        "update" => [
-            "session_owned" => true
-        ],
-        "read" => [
-            "session_owned" => true
-        ]
+        "create" => [],
+        "read" => [],
     ],
-    "usage_expiration_time" => 100
-]);
+    "session_limit" => "1",
+    "usage_expiration_time" => "100"
+];
+
+$serverToken = $ziggeo->authtokens()->create($permissions);
 
 
-$token = $ziggeo->auth()->generate(
-    [
-        "grants" => [
-            "create" => [
-                "session_owned" => true,
-                "token" => $serverToken->token
-            ],
-            "update" => [
-                "session_owned" => true,
-                "token" => $serverToken->token
-            ],
-            "read" => [
-                "session_owned" => true,
-                "token" => $serverToken->token
-            ]
-        ],
-        "session_limit" => 1
-    ]
-);
+$token = $ziggeo->auth()->generate($permissions);
 
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

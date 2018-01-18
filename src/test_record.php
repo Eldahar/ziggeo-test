@@ -40,7 +40,7 @@ function generateRandomString($length = 10) {
             token: "dc39fca5434c0532bee964012181ca04",
             webrtc_streaming: true,
             auth: true,
-            "client-auth": "<?php echo $serverToken->token ?>"
+            "server-auth": "<?php echo $serverToken->token ?>"
         });
     </script>
 </head>

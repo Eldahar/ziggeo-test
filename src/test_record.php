@@ -17,7 +17,8 @@ $permissions = [
         ],
     ],
     "session_limit" => "1",
-    "usage_expiration_time" => "100"
+    "usage_expiration_time" => "100",
+    "expiration_date" => date("U")+86400
 ];
 
 $serverToken = $ziggeo->authtokens()->create($permissions);
@@ -61,7 +62,6 @@ function generateRandomString($length = 10) {
             element: document.getElementById("replace_me-v2_recorder"),
             attrs: {
                 "client-auth": "<?php echo $token ?>",
-//                "server-auth": "<?php //echo $serverToken->token ?>//",
                 width: 320,
                 height: 240,
                 theme: "modern",

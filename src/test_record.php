@@ -20,8 +20,9 @@ $permissions = [
     "usage_expiration_time" => "100"
 ];
 
-$serverToken = $ziggeo->authtokens()->create($permissions);
-
+//$serverToken = $ziggeo->authtokens()->create($permissions);
+$serverToken = new StdClass();
+$serverToken->token = "339b06d1f1457a52919083b383a798c7";
 
 $token = $ziggeo->auth()->generate($permissions);
 

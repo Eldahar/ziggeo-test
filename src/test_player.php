@@ -17,8 +17,9 @@ $token = $ziggeo->auth()->generate(
                 "resources" => [ $videoToken ]
             ]
         ],
-        "expiration_date" => date("U")+100,
-        "volatile" => true
+        "session_limit" => "1",
+        "usage_expiration_time" => "100",
+        "expiration_date" => date("U")+600
     ]
 );
 

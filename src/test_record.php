@@ -24,7 +24,9 @@ $serverToken = $ziggeo->authtokens()->create($permissions);
 //$serverToken = new StdClass();
 //$serverToken->token = "339b06d1f1457a52919083b383a798c7";
 
-$token = $ziggeo->auth()->generate($permissions);
+$token = $ziggeo->auth()->generate(array_merge($permissions, [
+        "token" => $serverToken->token
+]));
 
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -59,7 +61,7 @@ function generateRandomString($length = 10) {
             element: document.getElementById("replace_me-v2_recorder"),
             attrs: {
                 "client-auth": "<?php echo $token ?>",
-                "server-auth": "<?php echo $serverToken->token ?>",
+//                "server-auth": "<?php //echo $serverToken->token ?>//",
                 width: 320,
                 height: 240,
                 theme: "modern",

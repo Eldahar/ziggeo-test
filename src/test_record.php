@@ -26,7 +26,7 @@ $serverToken = $ziggeo->authtokens()->create($permissions);
 //$serverToken->token = "339b06d1f1457a52919083b383a798c7";
 
 $token = $ziggeo->auth()->generate(array_merge($permissions, [
-        "token" => $serverToken->token
+//        "token" => $serverToken->token
 ]));
 
 function generateRandomString($length = 10) {

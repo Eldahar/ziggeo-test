@@ -39,8 +39,8 @@ function generateRandomString($length = 10) {
     <script>var app = new ZiggeoApi.V2.Application({
             token: "dc39fca5434c0532bee964012181ca04",
             webrtc_streaming: true,
-            auth: true,
-            "client-auth": "<?php echo $token ?>"
+            auth: true
+
 //            "server-auth": "<?php //echo $serverToken->token ?>//"
         });
     </script>
@@ -53,6 +53,7 @@ function generateRandomString($length = 10) {
         var recorder = new ZiggeoApi.V2.Recorder({
             element: document.getElementById("replace_me-v2_recorder"),
             attrs: {
+                "client-auth": "<?php echo $token ?>",
                 width: 320,
                 height: 240,
                 theme: "modern",

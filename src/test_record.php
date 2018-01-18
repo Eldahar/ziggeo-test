@@ -10,13 +10,13 @@ $token = $ziggeo->auth()->generate(
     [
         "grants" => [
             "create" => [
-                "session_owned" => false
+                "session_owned" => true
             ],
             "update" => [
-                "session_owned" => false
+                "session_owned" => true
             ],
             "read" => [
-                "session_owned" => false
+                "session_owned" => true
             ]
         ],
         "session_limit" => 1

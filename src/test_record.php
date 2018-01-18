@@ -19,7 +19,7 @@ $serverToken = $ziggeo->authtokens()->create([
             "session_owned" => true
         ]
     ],
-    "expiration_date" => date("U")+600
+    "usage_expiration_time" => 100
 ]);
 
 

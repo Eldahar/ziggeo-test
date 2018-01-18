@@ -1,6 +1,11 @@
 <?php
 
-$filename = sprintf("../tmp/%s", date("U"));
+$json = file_get_contents('php://input');
+$data = json_decode($json);
+$eventType = $data->event_type;
+$eventKind = $data->event_kind;
+
+$filename = sprintf("../tmp/%s_%s_%s", date("U"), $eventType, $eventKind);
 
 file_put_contents(
     $filename."_request.log",
@@ -14,5 +19,5 @@ file_put_contents(
 
 file_put_contents(
     $filename."_input.log",
-    file_get_contents('php://input')
+    $json
 );

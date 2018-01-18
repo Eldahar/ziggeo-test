@@ -10,9 +10,16 @@ $token = $ziggeo->auth()->generate(
     [
         "grants" => [
             "create" => [
-                "session_owned" => true
+                "session_owned" => false
+            ],
+            "update" => [
+                "session_owned" => false
+            ],
+            "read" => [
+                "session_owned" => false
             ]
-        ]
+        ],
+        "session_limit" => 1
     ]
 );
 

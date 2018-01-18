@@ -53,7 +53,7 @@ function generateRandomString($length = 10) {
         var recorder = new ZiggeoApi.V2.Recorder({
             element: document.getElementById("replace_me-v2_recorder"),
             attrs: {
-//                "client-auth": "<?php //echo $token ?>//",
+                "client-auth": "<?php echo $token ?>",
                 "server-auth": "<?php echo $serverToken->token ?>",
                 width: 320,
                 height: 240,

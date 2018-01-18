@@ -51,7 +51,7 @@ function generateRandomString($length = 10) {
                 height: 240,
                 theme: "modern",
                 themecolor: "red",
-                key: "<?php echo generateRandomString(10); ?>",
+                "custom-data": { id: "<?php echo generateRandomString(10); ?>" },
                 picksnapshots: false,
                 skipinitial: true,
                 skipinitialonrerecord: true,

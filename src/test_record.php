@@ -18,7 +18,7 @@ $permissions = [
     ],
     "session_limit" => "1",
     "usage_expiration_time" => "100",
-    "expiration_date" => date("U")+86400
+    "expiration_date" => date("U")+600
 ];
 
 $serverToken = $ziggeo->authtokens()->create($permissions);

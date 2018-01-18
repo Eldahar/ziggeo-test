@@ -2,7 +2,7 @@
 
 require_once "../vendor/autoload.php";
 
-$videoToken = "ae8d7a5b95c8a8b5d5958f599dea4d14";
+$videoToken = $_GET['token'];
 
 $ziggeo = new Ziggeo(
     'dc39fca5434c0532bee964012181ca04',
@@ -13,7 +13,8 @@ $token = $ziggeo->auth()->generate(
     [
         "grants" => [
             "read" => [
-                "session_owned" => true
+                "session_owned" => true,
+                "resources" => [ $videoToken ]
             ]
         ],
         "expiration_date" => date("U")+100,
@@ -29,8 +30,7 @@ $token = $ziggeo->auth()->generate(
     <script>var app = new ZiggeoApi.V2.Application({
             token: "dc39fca5434c0532bee964012181ca04",
             webrtc_streaming: true,
-            auth: true,
-            "client-auth": "<?php echo $token ?>"
+            auth: true
         });
     </script>
 </head>
@@ -42,6 +42,7 @@ $token = $ziggeo->auth()->generate(
         var player = new ZiggeoApi.V2.Player({
             element: document.getElementById("replace_me-v2_player"),
             attrs: {
+                "client-auth": "<?php echo $token ?>"
                 width: 320,
                 height: 180,
                 theme: "modern",

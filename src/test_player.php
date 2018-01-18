@@ -42,7 +42,7 @@ $token = $ziggeo->auth()->generate(
         var player = new ZiggeoApi.V2.Player({
             element: document.getElementById("replace_me-v2_player"),
             attrs: {
-                "client-auth": "<?php echo $token ?>"
+                "client-auth": "<?php echo $token ?>",
                 width: 320,
                 height: 180,
                 theme: "modern",

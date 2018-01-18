@@ -13,7 +13,6 @@ $token = $ziggeo->auth()->generate(
     [
         "grants" => [
             "read" => [
-                "session_owned" => true,
                 "resources" => [ $videoToken ]
             ]
         ],

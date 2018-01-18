@@ -21,7 +21,7 @@ $permissions = [
     "expiration_date" => date("U")+600
 ];
 
-$serverToken = $ziggeo->authtokens()->create($permissions);
+//$serverToken = $ziggeo->authtokens()->create($permissions);
 //$serverToken = new StdClass();
 //$serverToken->token = "339b06d1f1457a52919083b383a798c7";
 

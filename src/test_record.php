@@ -6,17 +6,37 @@ $ziggeo = new Ziggeo(
     '944e4e74eceeb43cd46ef15ace3f5134',
     '802376861b2dced1401381bf77864346'
 );
+
+$serverToken = $ziggeo->authtokens()->create([
+    "grants" => [
+        "create" => [
+            "session_owned" => true
+        ],
+        "update" => [
+            "session_owned" => true
+        ],
+        "read" => [
+            "session_owned" => true
+        ]
+    ],
+    "expiration_date" => date("U")+600
+]);
+
+
 $token = $ziggeo->auth()->generate(
     [
         "grants" => [
             "create" => [
-                "session_owned" => true
+                "session_owned" => true,
+                "token" => $serverToken->token
             ],
             "update" => [
-                "session_owned" => true
+                "session_owned" => true,
+                "token" => $serverToken->token
             ],
             "read" => [
-                "session_owned" => true
+                "session_owned" => true,
+                "token" => $serverToken->token
             ]
         ],
         "session_limit" => 1

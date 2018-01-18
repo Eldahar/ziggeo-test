@@ -15,12 +15,6 @@ $permissions = [
         "read" => [
             "session_owned" => true
         ],
-        "update" => [
-            "session_owned" => true
-        ],
-        "destroy" => [
-            "session_owned" => true
-        ],
     ],
     "session_limit" => "1",
     "usage_expiration_time" => "100"

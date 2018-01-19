@@ -13,7 +13,7 @@ $token = $ziggeo->auth()->generate(
     [
         "grants" => [
             "read" => [
-//                "resources" => [ $videoToken ]
+                "resources" => [ $videoToken ]
             ]
         ],
         "session_limit" => "1",

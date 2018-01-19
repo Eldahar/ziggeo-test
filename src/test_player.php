@@ -17,7 +17,7 @@ $token = $ziggeo->auth()->generate(
             ]
         ],
         "session_limit" => "1",
-        "usage_expiration_time" => "100",
+        "usage_expiration_time" => "10",
         "expiration_date" => date("U")+600
     ]
 );

@@ -46,10 +46,8 @@ function generateRandomString($length = 10) {
     <script src="https://assets-cdn.ziggeo.com/v2-stable/ziggeo.js"></script>
     <script>var app = new ZiggeoApi.V2.Application({
             token: "dc39fca5434c0532bee964012181ca04",
-            webrtc_streaming: true,
+//            webrtc_streaming: true,
             auth: true
-
-
         });
     </script>
 </head>
@@ -73,7 +71,7 @@ function generateRandomString($length = 10) {
                 skipinitial: true,
                 skipinitialonrerecord: true,
                 primaryrecord: true,
-                timelimit: 10,
+                timelimit: 60,
                 timeminlimit: 10,
                 autorecord: true,
                 countdown: 0,

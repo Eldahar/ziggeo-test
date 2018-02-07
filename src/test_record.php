@@ -73,7 +73,7 @@ function generateRandomString($length = 10) {
                 primaryrecord: true,
                 timelimit: 60,
                 timeminlimit: 10,
-                autorecord: true,
+                //autorecord: true,
                 countdown: 0,
                 rerecordable: false,
                 allowupload: false,

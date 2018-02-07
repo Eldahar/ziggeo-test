@@ -77,7 +77,8 @@ function generateRandomString($length = 10) {
                 countdown: 0,
                 rerecordable: false,
                 allowupload: false,
-                noflash: true
+                noflash: true,
+				simulate: true
             }
         });
 
